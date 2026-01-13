@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    padding-top: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.conteudo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textos {
+    width: 600px;
+}
+
+h2 {
+    color: #333;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+span {
+    color: #f12e2e;
+    font-size: 70px;
+    font-weight: 900;
+}
+
+p {
+    font-size: 30px;
+    text-align: justify;
+}
+
+button {
+    background: #000000;
+    color: white;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 20px;
+    transition: 0.5s;
+    font-size: 25px;
+}
+.imagem-copo,
+.botao-menu {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #da2020;
+}
+
+.imagem {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 150px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.botao-menu {
+    margin-top: 10%;
+    width: 60px;
+    cursor: pointer;
+}
+
+.circulo {
+    background: hwb(7 4% 13%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(600px at right 600px);
+    z-index: -1;
+}
+
+.logo {
+    width: 80px;
+}
+
+.imagem-copo {
+    width: 340px;
+}
+
+.texto-especial {
+    display: block;
+    font-size: 28px;
+    color: #ff0;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff0, 0 0 20px #ffa500, 0 0 30px #ff4500;
+    margin-top: 10px;
+    animation: brilho 1.5s infinite alternate;
+}
+
+@keyframes brilho {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+        text-shadow: 0 0 15px #ff0, 0 0 30px #ffa500, 0 0 45px #ff4500;
+    }
+}
+
+.texto-dinamico {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+.coracao {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    animation: descer 3s linear infinite;
+}
+
+@keyframes descer {
+    from {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 900px) {
+
+    body {
+        padding: 20px;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .textos {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 36px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    span {
+        font-size: 42px;
+    }
+
+    .texto-dinamico {
+        text-align: center;
+    }
+
+    p {
+        font-size: 15px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 280px;
+        margin: 20px auto 0;
+    }
+
+    .imagem {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .imagem-copo {
+        width: 220px;
+    }
+
+    .menu {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .botao-menu {
+        width: 50px;
+    }
+
+    .logo {
+        display: block;
+        margin: 0 auto 20px;
+        width: 60px;
+    }
+
+    .circulo {
+        clip-path: circle(300px at center bottom);
+    }
+
+    .imagem-copo:active {
+    transform: scale(0.95);
+}
+
+
+}
